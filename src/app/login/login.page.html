@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="container pt-3">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-10 col-md-6">
+            <div class="card border-info">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 ion-text-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" class="logo">
+                        </div>
+                        <div class="col-md-12">
+                            <form [formGroup]="signinForm" class="form-signin">
+                                <h3 class="h3 mb-3 font-weight-normal ion-text-center"></h3>
+                                <div class="form-group ion-text-center">
+                                    <label>Email: </label>
+                                    <input type="email" class="form-control" formControlName="email" #userEmail placeholder="Seu email" required>
+                                </div>
+                                <div class="form-group ion-text-center" >
+                                    <label>Senha: </label>
+                                    <input type="password" class="form-control" formControlName="password" #userPsw placeholder="Senha" required>
+                                </div>
+                            </form>
+                            <div class="ion-text-center">
+                                <br>
+                                <ion-button color="primary"  type="button" class="btn btn-block btn-info" (click)="loginUser(userEmail.value, userPsw.value)">Entrar
+                                  <ion-icon name="lock-closed"></ion-icon>
+                                </ion-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="redirectToLogin ion-text-center">
+                <a>Não possui uma conta?
+                    <span class="redirect" (click)="register()">
+                    <strong class="text-info">Cadastrar-se</strong>
+                </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</ion-content>
