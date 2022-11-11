@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>fishDetails</ion-title>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <!-- <ion-back-button></ion-back-button> -->
+    </ion-buttons>
+    <ion-title>Peixoto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <label>Teste</label>
+
+  <!-- <img src="{{ dataFish['img'] }}" class="logo" /><br />
+
+  <b> <ion-label>Nome: </ion-label></b>
+  <h6>{{ dataFish['name'] }}</h6>
+  <br />
+  <b><label>Descrição: </label></b>
+  <p>{{ dataFish['rate'] }}</p> -->
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="{{ dataFish['img'] }}" />
+    <ion-card-header>
+      <ion-card-title>{{ dataFish['name'] }}</ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ dataFish['rate'] }}
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+
+
+

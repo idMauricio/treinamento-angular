@@ -7,23 +7,25 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./fish-card.component.scss'],
 })
 export class FishCardComponent implements OnInit {
-
   @Input() dataFish: any;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {}
 
   ngOnInit() {}
 
-
   fistDetails(fishData) {
+    let dtoDataFish = {
+      img: fishData['Species Illustration Photo']?.src,
+      name: fishData['Species Name'],
+      rate: fishData['Fishing Rate'],
+      protein: fishData['Protein'],
+    };
     let navigationExtras: NavigationExtras = {
       state: {
-        data: fishData,
+        data: dtoDataFish,
       },
     };
 
     this.route.navigate(['fish-details'], navigationExtras);
   }
-
-
 }
