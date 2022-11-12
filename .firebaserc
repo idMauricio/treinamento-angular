@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "peixoto-fish": {
+      "hosting": {
+        "app": [
+          "peixoto-fish"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "peixoto-fish"
+  }
+}
